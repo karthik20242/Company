@@ -262,7 +262,7 @@
       </div>
       <div class="map-container">
        <div class="map-placeholder">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3891.1301917936516!2d77.64375456!3d12.77005605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae69390ca07bc7%3A0xb6ca21bec370e190!2sNavya%20textile%20industries!5e0!3m2!1sen!2sin!4v1764834495848!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3891.1305652447377!2d77.64116037507304!3d12.770031787527115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDQ2JzEyLjEiTiA3N8KwMzgnMzcuNSJF!5e0!3m2!1sen!2sin!4v1766487863491!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
        </div>
       </div>
      </div>
@@ -309,246 +309,128 @@
     <p class="footer-text">© 2024 GV Innovative Solutions. All rights reserved. | Engineered for Excellence</p>
    </div>
   </footer>
-  <script>
-        const defaultConfig = {
-            company_name: 'GV INNOVATIVE',
-            hero_headline: 'Innovative Conveyor Solutions',
-            hero_tagline: 'Engineering Excellence in Material Handling',
-            cta_button: 'Request Quote',
-            about_title: 'About GV Innovative Solutions',
-            contact_title: 'Get In Touch'
-        };
+<script>
+    const defaultConfig = {
+        company_name: 'GV INNOVATIVE',
+        hero_headline: 'Innovative Conveyor Solutions',
+        hero_tagline: 'Engineering Excellence in Material Handling',
+        cta_button: 'Request Quote',
+        about_title: 'About GV Innovative Solutions',
+        contact_title: 'Get In Touch'
+    };
+const products = [
+{ name: 'P.V.C & Belt Conveyor', description: 'Versatile PVC belt conveyors for light to medium-duty applications with customizable lengths and widths', image: 'assets/pvc belts.png' },
+{ name: 'ESD Workstation', description: 'Ergonomically designed ESD workstation with anti-static surfaces and adjustable height for safe electronic assembly', image: 'https://www.bostontec.com/wp-content/uploads/2021/09/Custom-Workbench-ESD-Workstation-CUS-A-S-007.jpg' },
 
-        const products = [
-            { name: 'P.V.C & Belt Conveyor', description: 'Versatile PVC belt conveyors for light to medium-duty applications with customizable lengths and widths', icon: '🔄' },
-            { name: 'Modular Plastic Conveyor', description: 'Hygienic modular belt systems ideal for food processing with easy cleaning and maintenance', icon: '⚙️' },
-            { name: 'Food Processing Conveyor', description: 'FDA-compliant conveyors designed for food industry standards with stainless steel construction', icon: '🍽️' },
-            { name: 'Inclined Modular Conveyor', description: 'Efficient vertical transport with anti-slip modular belts for elevation up to 45 degrees', icon: '📈' },
-            { name: 'Side Wall Belt Conveyor', description: 'High-angle conveyors with corrugated sidewalls for bulk material handling', icon: '📦' },
-            { name: 'Gravity Roller Conveyor', description: 'Cost-effective non-powered roller conveyors for manual material movement', icon: '🎯' },
-            { name: 'Power Roller Conveyor', description: 'Motorized roller systems for heavy-duty applications up to 500kg per meter', icon: '⚡' },
-            { name: 'Flexible Roller Conveyor', description: 'Expandable roller conveyors for dynamic layouts and temporary installations', icon: '🔀' },
-            { name: 'Gravity Flexible Roller Conveyor', description: 'Portable gravity-fed flexible roller systems perfect for loading docks', icon: '🌊' },
-            { name: 'Assembly Line Conveyor', description: 'Precision conveyors for manufacturing assembly lines with speed control', icon: '🏭' },
-            { name: 'Inclined Loading Conveyor', description: 'Steep incline conveyors for loading operations with cleated belts', icon: '⬆️' },
-            { name: 'Truck Loading Conveyor', description: 'Heavy-duty systems for efficient truck loading with telescopic options', icon: '🚛' },
-            { name: 'Telescopic Conveyor', description: 'Extendable conveyors for flexible loading/unloading operations', icon: '📏' },
-            { name: 'PCB Conveyor', description: 'ESD-safe conveyors for electronics assembly with precise positioning', icon: '💻' },
-            { name: 'Robotic Conveyor', description: 'Automated systems integrated with robotic arms for smart manufacturing', icon: '🤖' },
-            { name: 'Timing Belt Conveyor', description: 'Precision positioning conveyors with timing belts for accurate indexing', icon: '⏱️' },
-            { name: 'Flex Chain Conveyor', description: 'Durable multi-flexing chain conveyors for complex routing requirements', icon: '🔗' },
-            { name: 'Bottle Transfer Conveyor', description: 'Specialized systems for bottle handling in beverage industry', icon: '🍾' },
-            { name: 'Wire Mesh Conveyor', description: 'Open mesh belts for drainage and cooling applications in processing', icon: '🕸️' },
-            { name: 'Slat Chain Conveyor', description: 'Heavy-duty slat chain systems for pallet handling up to 2000kg', icon: '⛓️' },
-            { name: 'Pallet Transfer Conveyor', description: 'Robust conveyors for pallet movement in warehousing operations', icon: '📋' },
-            { name: 'Z-Type Conveyor', description: 'Space-saving vertical Z-configuration conveyors for multi-level transport', icon: '↕️' },
-            { name: 'Bucket Elevator Conveyor', description: 'Vertical bulk material handling elevators with continuous operation', icon: '🪣' },
-            { name: 'ABS Pipe Trolley', description: 'Lightweight ABS pipe material handling trolleys with ergonomic design', icon: '🛒' },
-            { name: 'ABS Pipe Table', description: 'Modular ABS pipe workstation tables with adjustable heights', icon: '🪑' },
-            { name: 'Aluminium Trolley', description: 'Corrosion-resistant aluminium trolleys for clean room applications', icon: '🛍️' },
-            { name: 'Material Handling Trolley', description: 'Industrial-grade material transport trolleys with heavy load capacity', icon: '📦' },
-            { name: 'Aluminium Profile Table', description: 'Adjustable aluminium profile work tables with modular accessories', icon: '🔧' },
-            { name: 'Assembly Line Workstation', description: 'Ergonomic workstations for assembly operations with tool organization', icon: '👷' },
-            { name: 'Industrial Safety Fencing', description: 'Modular safety barriers and machine guarding systems for workplace safety', icon: '🚧' }
-        ];
+{ "name": "Aluminium Work Table", "description": "Durable aluminium work table with lightweight frame, corrosion-resistant surface, and customizable dimensions", image: 'assets/aluminium work bench.png' },
 
-        async function onConfigChange(config) {
-            const companyNameElement = document.getElementById('companyName');
-            const heroHeadlineElement = document.getElementById('heroHeadline');
-            const heroTaglineElement = document.getElementById('heroTagline');
-            const ctaButtonElement = document.querySelector('#ctaButton span:first-child');
-            const aboutTitleElement = document.getElementById('aboutTitle');
-            const contactTitleElement = document.getElementById('contactTitle');
 
-            const companyName = config.company_name || defaultConfig.company_name;
-            const parts = companyName.split(' ');
-            const firstPart = parts.slice(0, -1).join(' ');
-            const lastWord = parts[parts.length - 1];
-            
-            companyNameElement.innerHTML = `${firstPart} <span>${lastWord}</span>`;
-            heroHeadlineElement.textContent = config.hero_headline || defaultConfig.hero_headline;
-            heroTaglineElement.textContent = config.hero_tagline || defaultConfig.hero_tagline;
-            ctaButtonElement.textContent = config.cta_button || defaultConfig.cta_button;
-            aboutTitleElement.textContent = config.about_title || defaultConfig.about_title;
-            contactTitleElement.textContent = config.contact_title || defaultConfig.contact_title;
-        }
 
-        function mapToCapabilities(config) {
-            return {
-                recolorables: [],
-                borderables: [],
-                fontEditable: undefined,
-                fontSizeable: undefined
-            };
-        }
 
-        function mapToEditPanelValues(config) {
-            return new Map([
-                ['company_name', config.company_name || defaultConfig.company_name],
-                ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
-                ['hero_tagline', config.hero_tagline || defaultConfig.hero_tagline],
-                ['cta_button', config.cta_button || defaultConfig.cta_button],
-                ['about_title', config.about_title || defaultConfig.about_title],
-                ['contact_title', config.contact_title || defaultConfig.contact_title]
-            ]);
-        }
 
-        if (window.elementSdk) {
-            window.elementSdk.init({
-                defaultConfig,
-                onConfigChange,
-                mapToCapabilities,
-                mapToEditPanelValues
-            });
-        }
+ { name: 'Modular Plastic Conveyor', description: 'Hygienic modular belt systems ideal for food processing with easy cleaning and maintenance', image: 'assets/modular plastic conveyor.jpg' },
+  { name: 'Food Processing Conveyor', description: 'FDA-compliant conveyors designed for food industry standards with stainless steel construction', image: 'assets/food processing conveyor.png' },
+   { name: 'Inclined Modular Conveyor', description: 'Efficient vertical transport with anti-slip modular belts for elevation applications', image: 'assets/inclined modular conveyor.png' }, 
+   { "name": "Side Wall Belt Conveyor", "description": "High-angle belt conveyors with corrugated sidewalls for bulk material handling", image: 'assets/side wall belt conveyor.png' },
 
-        // Populate products dropdown
-        const productsDropdown = document.getElementById('productsDropdown');
-        products.forEach(product => {
-            const link = document.createElement('a');
-            link.href = '#products';
-            link.className = 'dropdown-item';
-            link.textContent = product.name;
-            productsDropdown.appendChild(link);
+    { name: 'Gravity Roller Conveyor', description: 'Cost-effective non-powered roller conveyors for manual material movement', image: 'assets/gravity roller conveyor.png' }, 
+    { name: 'Power Roller Conveyor', description: 'Motorized roller conveyors for heavy-duty industrial applications', image: 'assets/power roller conveyor.jpg' },
+     { name: 'Flexible Roller Conveyor', description: 'Expandable roller conveyors for dynamic layouts and temporary installations', image: 'assets/flexible roller conveyor.webp' },
+      { name: 'Gravity Flexible Roller Conveyor', description: 'Portable gravity-fed flexible roller systems ideal for loading docks', image: 'assets/gravity flexible roller conveyor.jpg' },
+       { name: 'Assembly Line Conveyor', description: 'Precision conveyors for manufacturing assembly lines with speed control', image: 'assets/assembly line conveyor.jpg' }
+
+
+
+
+];
+;
+
+    async function onConfigChange(config) {
+        const companyNameElement = document.getElementById('companyName');
+        const heroHeadlineElement = document.getElementById('heroHeadline');
+        const heroTaglineElement = document.getElementById('heroTagline');
+        const ctaButtonElement = document.querySelector('#ctaButton span:first-child');
+        const aboutTitleElement = document.getElementById('aboutTitle');
+        const contactTitleElement = document.getElementById('contactTitle');
+
+        const companyName = config.company_name || defaultConfig.company_name;
+        const parts = companyName.split(' ');
+        const firstPart = parts.slice(0, -1).join(' ');
+        const lastWord = parts[parts.length - 1];
+
+        companyNameElement.innerHTML = `${firstPart} <span>${lastWord}</span>`;
+        heroHeadlineElement.textContent = config.hero_headline || defaultConfig.hero_headline;
+        heroTaglineElement.textContent = config.hero_tagline || defaultConfig.hero_tagline;
+        ctaButtonElement.textContent = config.cta_button || defaultConfig.cta_button;
+        aboutTitleElement.textContent = config.about_title || defaultConfig.about_title;
+        contactTitleElement.textContent = config.contact_title || defaultConfig.contact_title;
+    }
+
+    if (window.elementSdk) {
+        window.elementSdk.init({
+            defaultConfig,
+            onConfigChange
         });
+    }
 
-        // Populate products grid
-        const productsGrid = document.getElementById('productsGrid');
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'product-card scroll-reveal';
-            card.innerHTML = `
-                <div class="product-image">${product.icon}</div>
-                <div class="product-content">
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-description">${product.description}</p>
-                    <button class="product-button">Learn More</button>
-                </div>
-            `;
-            productsGrid.appendChild(card);
-        });
+    /* ---------- PRODUCTS DROPDOWN ---------- */
+    const productsDropdown = document.getElementById('productsDropdown');
 
-        // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.classList.toggle('active');
-        });
+    products.forEach(product => {
+        const link = document.createElement('a');
+        link.href = '#products';
+        link.className = 'dropdown-item';
+        link.textContent = product.name;
+        productsDropdown.appendChild(link);
+    });
 
-        // Products dropdown toggle for mobile
-        const productsNav = document.getElementById('productsNav');
-        productsNav.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.stopPropagation();
-                productsNav.classList.toggle('active');
-            }
-        });
+    /* ---------- PRODUCTS GRID (IMAGE ENABLED) ---------- */
+    const productsGrid = document.getElementById('productsGrid');
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileToggle.classList.remove('active');
-                productsNav.classList.remove('active');
-            });
-        });
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card scroll-reveal';
 
-        // Sticky header on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-reveal').forEach(element => {
-            observer.observe(element);
-        });
-
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            };
-
-            // Create success notification
-            const successMessage = document.createElement('div');
-            successMessage.style.cssText = `
-                position: fixed;
-                top: 120px;
-                right: 30px;
-                background: linear-gradient(135deg, #10b981, #059669);
-                color: white;
-                padding: 1.8rem 2.5rem;
-                border-radius: 20px;
-                box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5);
-                z-index: 100000;
-                font-weight: 700;
-                font-size: 1.1rem;
-                animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-                border: 2px solid rgba(255, 255, 255, 0.3);
-            `;
-            successMessage.innerHTML = '✓ Message sent successfully! We\'ll contact you soon.';
-            document.body.appendChild(successMessage);
-
-            // Reset form
-            contactForm.reset();
-
-            // Remove message after 5 seconds
-            setTimeout(() => {
-                successMessage.style.animation = 'slideOut 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-                setTimeout(() => successMessage.remove(), 500);
-            }, 5000);
-        });
-
-        // Add slide animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(500px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-            @keyframes slideOut {
-                from {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateX(500px);
-                    opacity: 0;
-                }
-            }
+        card.innerHTML = `
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="product-content">
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <button class="product-button">Learn More</button>
+            </div>
         `;
-        document.head.appendChild(style);
-    </script>
+
+        productsGrid.appendChild(card);
+    });
+
+    /* ---------- MOBILE MENU ---------- */
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileToggle.classList.toggle('active');
+    });
+
+    /* ---------- STICKY HEADER ---------- */
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        header.classList.toggle('scrolled', window.scrollY > 100);
+    });
+
+    /* ---------- SCROLL REVEAL ---------- */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+</script>
+
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8949c710a68004',t:'MTc2NDgzMDE3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
