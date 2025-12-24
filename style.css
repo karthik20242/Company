@@ -129,7 +129,7 @@
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             left: 0;
             width: 0;
             height: 3px;
@@ -1261,10 +1261,10 @@
                 top: 90px;
                 left: -100%;
                 width: 100%;
-                height: calc(100% - 90px);
+                height: calc(250% - 30px);
                 background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.98));
                 backdrop-filter: blur(20px);
-                flex-direction: column;
+                flex-direction:column;
                 align-items: flex-start;
                 padding: 2rem;
                 transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1280,6 +1280,7 @@
                 width: 100%;
                 padding: 1.5rem 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                
             }
 
             .mega-dropdown {
