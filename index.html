@@ -26,12 +26,12 @@
     </div>
     <ul class="nav-menu" id="navMenu">
      <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-     <li class="nav-item" id="productsNav"><span class="nav-link"> Products <span class="dropdown-arrow">▼</span> </span>
-      <div class="mega-dropdown">
-       <div class="dropdown-header">
-        Our Product Range
+     <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+     
+      
+        
        </div>
-       <div class="dropdown-grid" id="productsDropdown"></div>
+       
       </div></li>
      <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -211,6 +211,9 @@
      </div>
     </div>
    </div>
+
+
+
   </section><!-- Contact Section -->
   <section class="contact" id="contact">
    <div class="main-container">
@@ -307,128 +310,132 @@
     <p class="footer-text">© 2024 GV Innovative Solutions. All rights reserved. | Engineered for Excellence</p>
    </div>
   </footer>
+
+
 <script>
     const defaultConfig = {
-        company_name: 'GV INNOVATIVE',
-        hero_headline: 'Innovative Conveyor Solutions',
-        hero_tagline: 'Engineering Excellence in Material Handling',
-        cta_button: 'Request Quote',
-        about_title: 'About GV Innovative Solutions',
-        contact_title: 'Get In Touch'
-    };
+    company_name: 'GV INNOVATIVE',
+    hero_headline: 'Innovative Conveyor Solutions',
+    hero_tagline: 'Engineering Excellence in Material Handling',
+    cta_button: 'Request Quote',
+    about_title: 'About GV Innovative Solutions',
+    contact_title: 'Get In Touch'
+};
+
 const products = [
-{ name: 'P.V.C & Belt Conveyor', description: 'Versatile PVC belt conveyors for light to medium-duty applications with customizable lengths and widths', image: 'assets/pvc belts.png' },
-{ name: 'ESD Workstation', description: 'Ergonomically designed ESD workstation with anti-static surfaces and adjustable height for safe electronic assembly', image: 'https://www.bostontec.com/wp-content/uploads/2021/09/Custom-Workbench-ESD-Workstation-CUS-A-S-007.jpg' },
+   {
+    name: 'Conveyor & Automation Systems',
+    description: 'Advanced conveyor solutions and automation systems to optimize material flow and increase productivity across industrial applications.',
+    image: 'assets/conveyor%20and%20automation%20system.png', // spaces replaced with %20
+    link: 'http://127.0.0.1:5500/products.html'
+},
 
-{ "name": "Aluminium Work Table", "description": "Durable aluminium work table with lightweight frame, corrosion-resistant surface, and customizable dimensions", image: 'assets/aluminium work bench.png' },
-
-
-
-
-
- { name: 'Modular Plastic Conveyor', description: 'Hygienic modular belt systems ideal for food processing with easy cleaning and maintenance', image: 'assets/modular plastic conveyor.jpg' },
-  { name: 'Food Processing Conveyor', description: 'FDA-compliant conveyors designed for food industry standards with stainless steel construction', image: 'assets/food processing conveyor.png' },
-   { name: 'Inclined Modular Conveyor', description: 'Efficient vertical transport with anti-slip modular belts for elevation applications', image: 'assets/inclined modular conveyor.png' }, 
-   { "name": "Side Wall Belt Conveyor", "description": "High-angle belt conveyors with corrugated sidewalls for bulk material handling", image: 'assets/side wall belt conveyor.png' },
-
-    { name: 'Gravity Roller Conveyor', description: 'Cost-effective non-powered roller conveyors for manual material movement', image: 'assets/gravity roller conveyor.png' }, 
-    { name: 'Power Roller Conveyor', description: 'Motorized roller conveyors for heavy-duty industrial applications', image: 'assets/power roller conveyor.jpg' },
-     { name: 'Flexible Roller Conveyor', description: 'Expandable roller conveyors for dynamic layouts and temporary installations', image: 'assets/flexible roller conveyor.webp' },
-      { name: 'Gravity Flexible Roller Conveyor', description: 'Portable gravity-fed flexible roller systems ideal for loading docks', image: 'assets/gravity flexible roller conveyor.jpg' },
-       { name: 'Assembly Line Conveyor', description: 'Precision conveyors for manufacturing assembly lines with speed control', image: 'assets/assembly line conveyor.jpg' }
-
-
-
-
+    {
+        name: 'Material Handling Solutions',
+        description: 'Comprehensive material handling equipment including lifts, palletizers, and transfer systems designed to improve safety and efficiency.',
+        image: 'assets/material handling solutions.png',
+        link: 'http://127.0.0.1:5500/products.html'
+    },
+   {
+    name: 'Industrial Workstations',
+    description: 'Ergonomic and modular workstations for assembly, packing, and inspection, built for durability and worker comfort.',
+    image: 'assets/workstation.jpg',
+    link: 'http://127.0.0.1:5500/products.html'
+}
+,
+    {
+        name: 'Warehouse & Logistics Equipment',
+        description: 'Innovative warehouse solutions including racks, trolleys, and storage systems to maximize space utilization and streamline logistics.',
+        image: 'assets/warehouse.png',
+        link: 'http://127.0.0.1:5500/products.html'
+    },
+    {
+        name: 'Industrial Safety Solutions',
+        description: 'Comprehensive safety products and systems to ensure a secure working environment, reducing risks and enhancing compliance.',
+        image: 'assets/industrial safety solutions.png',
+        link: 'http://127.0.0.1:5500/products.html'
+    }
 ];
-;
 
-    async function onConfigChange(config) {
-        const companyNameElement = document.getElementById('companyName');
-        const heroHeadlineElement = document.getElementById('heroHeadline');
-        const heroTaglineElement = document.getElementById('heroTagline');
-        const ctaButtonElement = document.querySelector('#ctaButton span:first-child');
-        const aboutTitleElement = document.getElementById('aboutTitle');
-        const contactTitleElement = document.getElementById('contactTitle');
 
-        const companyName = config.company_name || defaultConfig.company_name;
-        const parts = companyName.split(' ');
-        const firstPart = parts.slice(0, -1).join(' ');
-        const lastWord = parts[parts.length - 1];
+async function onConfigChange(config) {
+    const companyNameElement = document.getElementById('companyName');
+    const heroHeadlineElement = document.getElementById('heroHeadline');
+    const heroTaglineElement = document.getElementById('heroTagline');
+    const ctaButtonElement = document.querySelector('#ctaButton span:first-child');
+    const aboutTitleElement = document.getElementById('aboutTitle');
+    const contactTitleElement = document.getElementById('contactTitle');
 
-        companyNameElement.innerHTML = `${firstPart} <span>${lastWord}</span>`;
-        heroHeadlineElement.textContent = config.hero_headline || defaultConfig.hero_headline;
-        heroTaglineElement.textContent = config.hero_tagline || defaultConfig.hero_tagline;
-        ctaButtonElement.textContent = config.cta_button || defaultConfig.cta_button;
-        aboutTitleElement.textContent = config.about_title || defaultConfig.about_title;
-        contactTitleElement.textContent = config.contact_title || defaultConfig.contact_title;
-    }
+    const companyName = config.company_name || defaultConfig.company_name;
+    const parts = companyName.split(' ');
+    const firstPart = parts.slice(0, -1).join(' ');
+    const lastWord = parts[parts.length - 1];
 
-    if (window.elementSdk) {
-        window.elementSdk.init({
-            defaultConfig,
-            onConfigChange
-        });
-    }
+    companyNameElement.innerHTML = `${firstPart} <span>${lastWord}</span>`;
+    heroHeadlineElement.textContent = config.hero_headline || defaultConfig.hero_headline;
+    heroTaglineElement.textContent = config.hero_tagline || defaultConfig.hero_tagline;
+    ctaButtonElement.textContent = config.cta_button || defaultConfig.cta_button;
+    aboutTitleElement.textContent = config.about_title || defaultConfig.about_title;
+    contactTitleElement.textContent = config.contact_title || defaultConfig.contact_title;
+}
 
-    /* ---------- PRODUCTS DROPDOWN ---------- */
-    const productsDropdown = document.getElementById('productsDropdown');
-
-    products.forEach(product => {
-        const link = document.createElement('a');
-        link.href = '#products';
-        link.className = 'dropdown-item';
-        link.textContent = product.name;
-        productsDropdown.appendChild(link);
+if (window.elementSdk) {
+    window.elementSdk.init({
+        defaultConfig,
+        onConfigChange
     });
+}
 
-    /* ---------- PRODUCTS GRID (IMAGE ENABLED) ---------- */
-    const productsGrid = document.getElementById('productsGrid');
+/* ---------- PRODUCTS DROPDOWN ---------- */
 
-    products.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'product-card scroll-reveal';
 
-        card.innerHTML = `
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}">
-            </div>
-            <div class="product-content">
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-description">${product.description}</p>
-                
-            </div>
-        `;
+/* ---------- PRODUCTS GRID (IMAGE + BUTTON) ---------- */
+const productsGrid = document.getElementById('productsGrid');
+products.forEach(product => {
+    const card = document.createElement('div');
+    card.className = 'product-card scroll-reveal';
 
-        productsGrid.appendChild(card);
+    card.innerHTML = `
+        <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="product-content">
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-description">${product.description}</p>
+            <a href="${product.link}" class="know-more-btn">Know More →</a>
+        </div>
+    `;
+    productsGrid.appendChild(card);
+});
+
+/* ---------- MOBILE MENU ---------- */
+const mobileToggle = document.getElementById('mobileToggle');
+const navMenu = document.getElementById('navMenu');
+mobileToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
+});
+
+/* ---------- STICKY HEADER ---------- */
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    header.classList.toggle('scrolled', window.scrollY > 100);
+});
+
+/* ---------- SCROLL REVEAL ---------- */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
     });
+}, { threshold: 0.1 });
 
-    /* ---------- MOBILE MENU ---------- */
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
+document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
-    mobileToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileToggle.classList.toggle('active');
-    });
-
-    /* ---------- STICKY HEADER ---------- */
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('header');
-        header.classList.toggle('scrolled', window.scrollY > 100);
-    });
-
-    /* ---------- SCROLL REVEAL ---------- */
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-</script>
-
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8949c710a68004',t:'MTc2NDgzMDE3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    
+    </script>
+   
+   
+    </body>
 </html>
