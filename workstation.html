@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovative Conveyor Solutions</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    .scroll-container {
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e0 #f7fafc;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+      background: #f7fafc;
+      border-radius: 4px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: #cbd5e0;
+      border-radius: 4px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb:hover {
+      background: #a0aec0;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+      opacity: 0.8;
+    }
+    
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.02) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.02) 75%);
+      background-size: 60px 60px;
+      background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+    }
+
+    .product-card {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .product-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.05);
+    }
+    
+    
+   
+
+    
+
+   
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .hero-content {
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .category-tabs {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .category-tabs::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+     <!-- Industrial Workstations -->
+<section id="workstations" class="py-16 px-4 md:px-8 fade-in" style="background-color: #1a202c;">
+  <div class="main-wrapper">
+    <div class="mb-12">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4" style="color: #ffffff;">Industrial Workstations</h3>
+      <p class="text-lg" style="color: #cbd5e0;">Ergonomic workstations optimized for productivity and efficiency</p>
+    </div>
+
+    <div class="scroll-container overflow-x-auto pb-4">
+      <div class="flex space-x-6" style="min-width: min-content;">
+
+        <!-- Assembly Line Workstation Card -->
+        <div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+          <!-- Image from assets -->
+          <img src="assets/workstation.jpg" alt="Assembly Line Workstation" class="w-full h-48 object-cover">
+
+          <!-- Product description -->
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Assembly Line Workstation</h4>
+            <p style="color: #4a5568;">Complete workstation solutions for efficient assembly line operations and manufacturing.</p>
+          </div>
+        </div>
+
+<!-- Manual Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/manual workstation.webp" alt="Manual Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Manual Workstation</h4>
+    <p style="color: #4a5568;">Workstation where operations are performed entirely by human operators, ideal for flexible tasks.</p>
+  </div>
+</div>
+
+<!-- Semi-Automatic Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/semi automatic work station.webp" alt="Semi-Automatic Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Semi-Automatic Workstation</h4>
+    <p style="color: #4a5568;">Combination of human work and machine operation, suitable for repetitive tasks with operator involvement.</p>
+  </div>
+</div>
+
+
+
+<!-- Machining Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/machineing work station.avif" alt="Machining Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Machining Workstation</h4>
+    <p style="color: #4a5568;">Workstation for material shaping and removal like turning, milling, or drilling operations.</p>
+  </div>
+</div>
+
+<!-- Fabrication Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/fabrication work station.webp" alt="Fabrication Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Fabrication Workstation</h4>
+    <p style="color: #4a5568;">Workstation for welding, cutting, bending, and assembling raw materials into structures.</p>
+  </div>
+</div>
+
+<!-- Inspection Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/inspection work station.jpg "alt="Inspection Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Inspection Workstation</h4>
+    <p style="color: #4a5568;">Workstation for checking product dimensions, quality, and conformity to specifications.</p>
+  </div>
+</div>
+
+<!-- Testing Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/testing work station.webp" alt="Testing Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Testing Workstation</h4>
+    <p style="color: #4a5568;">Workstation for functional and performance testing to ensure products meet standards.</p>
+  </div>
+</div>
+
+<!-- Packaging Workstation Card -->
+<div class="product-card flex-shrink-0 w-80 bg-white rounded-xl overflow-hidden shadow-lg">
+  <img src="assets/packaging work station.webp" alt="Packaging Workstation" class="w-full h-48 object-cover">
+  <div class="p-6">
+    <h4 class="text-xl font-bold mb-2" style="color: #1a202c;">Packaging Workstation</h4>
+    <p style="color: #4a5568;">Workstation for packing, labeling, and preparing products for shipment or storage.</p>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
+  
+
+  
+   <!-- Footer -->
+   <footer class="py-12 px-4 md:px-8" style="background-color: #0f1419; color: white;">
+    <div class="main-wrapper">
+     <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+       <div class="flex items-center space-x-2 mb-4">
+       
+        
+       <p id="footer-tagline" class="text-sm" style="color: #9ca3af;">Engineering Excellence in Material Handling</p>
+      </div>
+      <div>
+       <h4 class="font-bold mb-4">Products</h4>
+       <ul class="space-y-2 text-sm" style="color: #9ca3af;">
+        <li><a href="#conveyors" class="hover:text-white transition-colors">Conveyor Systems</a></li>
+        <li><a href="#material-handling" class="hover:text-white transition-colors">Material Handling</a></li>
+        <li><a href="#workstations" class="hover:text-white transition-colors">Workstations</a></li>
+        <li><a href="#safety" class="hover:text-white transition-colors">Safety Solutions</a></li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-bold mb-4">Company</h4>
+       <ul class="space-y-2 text-sm" style="color: #9ca3af;">
+        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+       </ul>
+      </div>
+      <div>
+       <h4 class="font-bold mb-4">Support</h4>
+       <ul class="space-y-2 text-sm" style="color: #9ca3af;">
+        <li>📧 gvinnovative25.com</li>
+        <li><p>📞 +91 8667490102 &nbsp&nbsp +91 9003676076</p> </li>
+          
+        <li>📍 Shed No CP-138, Dr. Ambedkar Industrial Estate,
+2nd Main, Phase-1, Jigani Industrial Area,
+Jigani Post, Bengaluru Urban,
+Karnataka - 560105</li>
+       </ul>
+      </div>
+     </div>
+    
+    </div>
+     <div class="border-t pt-8 text-center text-sm" style="border-color: #374151; color: #9ca3af;">
+      <p>© 2024 GV Innovative Solutions. All rights reserved.</p>
+     </div>
+   </footer>
+  </div>
+  <script>
+    // Configuration
+    const defaultConfig = {
+      background_color: "#1a202c",
+      surface_color: "#ffffff",
+      text_color: "#1a202c",
+      primary_action_color: "#1a73e8",
+      secondary_action_color: "#34a853",
+      font_family: "system-ui, -apple-system, sans-serif",
+      font_size: 16,
+      hero_headline: "Innovative Conveyor Solutions",
+      hero_tagline: "Engineering Excellence in Material Handling",
+      cta_button_text: "Request Quote",
+      company_name: "ConveyorTech",
+      footer_tagline: "Engineering Excellence in Material Handling"
+    };
+
+    // Element SDK initialization
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const bgColor = config.background_color || defaultConfig.background_color;
+          const surfaceColor = config.surface_color || defaultConfig.surface_color;
+          const textColor = config.text_color || defaultConfig.text_color;
+          const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+          const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+          const fontFamily = config.font_family || defaultConfig.font_family;
+          const baseFontSize = config.font_size || defaultConfig.font_size;
+
+          // Apply colors
+          document.querySelectorAll('.hero-bg').forEach(el => el.style.background = `linear-gradient(135deg, ${bgColor} 0%, #2d3748 100%)`);
+          document.querySelectorAll('.product-card').forEach(el => el.style.backgroundColor = surfaceColor);
+          document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, button').forEach(el => {
+            if (!el.style.color || el.style.color === '') {
+              el.style.color = textColor;
+            }
+          });
+
+          // Apply primary action color
+          const primaryButtons = [
+            document.getElementById('quote-btn-header'),
+            document.getElementById('quote-btn-mobile'),
+            document.getElementById('cta-button')
+          ];
+          primaryButtons.forEach(btn => {
+            if (btn) {
+              btn.style.backgroundColor = primaryColor;
+              btn.style.color = surfaceColor;
+            }
+          });
+
+          // Apply secondary action color
+          document.querySelectorAll('[style*="#34a853"]').forEach(el => {
+            el.style.backgroundColor = secondaryColor;
+          });
+
+          // Apply font
+          const fontStack = `${fontFamily}, system-ui, -apple-system, sans-serif`;
+          document.body.style.fontFamily = fontStack;
+
+          // Apply font sizes
+          document.querySelectorAll('h1, #company-name').forEach(el => el.style.fontSize = `${baseFontSize * 1.5}px`);
+          document.querySelectorAll('h2').forEach(el => el.style.fontSize = `${baseFontSize * 2}px`);
+          document.querySelectorAll('h3').forEach(el => el.style.fontSize = `${baseFontSize * 1.75}px`);
+          document.querySelectorAll('h4').forEach(el => el.style.fontSize = `${baseFontSize * 1.25}px`);
+          document.querySelectorAll('p, a, button, span').forEach(el => el.style.fontSize = `${baseFontSize}px`);
+
+          // Apply text content
+          const heroHeadline = document.getElementById('hero-headline');
+          if (heroHeadline) heroHeadline.textContent = config.hero_headline || defaultConfig.hero_headline;
+
+          const heroTagline = document.getElementById('hero-tagline');
+          if (heroTagline) heroTagline.textContent = config.hero_tagline || defaultConfig.hero_tagline;
+
+          const ctaButton = document.getElementById('cta-button');
+          if (ctaButton) ctaButton.textContent = config.cta_button_text || defaultConfig.cta_button_text;
+
+          const companyName = document.getElementById('company-name');
+          if (companyName) companyName.textContent = config.company_name || defaultConfig.company_name;
+
+          const footerCompanyName = document.getElementById('footer-company-name');
+          if (footerCompanyName) footerCompanyName.textContent = config.company_name || defaultConfig.company_name;
+
+          const footerTagline = document.getElementById('footer-tagline');
+          if (footerTagline) footerTagline.textContent = config.footer_tagline || defaultConfig.footer_tagline;
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => {
+                config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["hero_headline", config.hero_headline || defaultConfig.hero_headline],
+          ["hero_tagline", config.hero_tagline || defaultConfig.hero_tagline],
+          ["cta_button_text", config.cta_button_text || defaultConfig.cta_button_text],
+          ["company_name", config.company_name || defaultConfig.company_name],
+          ["footer_tagline", config.footer_tagline || defaultConfig.footer_tagline]
+        ])
+      });
+    }
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Sticky header scroll effect
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = document.getElementById('header').offsetHeight;
+          const targetPosition = target.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Quote button handlers
+    const quoteButtons = [
+      document.getElementById('quote-btn-header'),
+      document.getElementById('quote-btn-mobile'),
+      document.getElementById('cta-button')
+    ];
+
+    quoteButtons.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPosition = contactSection.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+
+    // Touch swipe functionality for product galleries
+    const galleries = document.querySelectorAll('.scroll-container');
+    
+    galleries.forEach(gallery => {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+      let velocity = 0;
+      let lastX = 0;
+      let lastTime = Date.now();
+
+      gallery.addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+        velocity = 0;
+        lastX = e.touches[0].pageX;
+        lastTime = Date.now();
+        gallery.style.scrollBehavior = 'auto';
+      });
+
+      gallery.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - gallery.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        gallery.scrollLeft = scrollLeft - walk;
+        
+        const currentTime = Date.now();
+        const timeDiff = currentTime - lastTime;
+        if (timeDiff > 0) {
+          velocity = (e.touches[0].pageX - lastX) / timeDiff;
+        }
+        lastX = e.touches[0].pageX;
+        lastTime = currentTime;
+      });
+
+      gallery.addEventListener('touchend', () => {
+        isDown = false;
+        
+        // Apply momentum scrolling
+        if (Math.abs(velocity) > 0.5) {
+          const momentum = velocity * 200;
+          gallery.style.scrollBehavior = 'smooth';
+          gallery.scrollLeft -= momentum;
+        }
+      });
+
+      // Mouse drag support for desktop
+      gallery.addEventListener('mousedown', (e) => {
+        isDown = true;
+        gallery.style.cursor = 'grabbing';
+        startX = e.pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+        gallery.style.scrollBehavior = 'auto';
+      });
+
+      gallery.addEventListener('mouseleave', () => {
+        isDown = false;
+        gallery.style.cursor = 'grab';
+      });
+
+      gallery.addEventListener('mouseup', () => {
+        isDown = false;
+        gallery.style.cursor = 'grab';
+        gallery.style.scrollBehavior = 'smooth';
+      });
+
+      gallery.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - gallery.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        gallery.scrollLeft = scrollLeft - walk;
+      });
+
+      // Set cursor style
+      gallery.style.cursor = 'grab';
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b784d78458a6e29',t:'MTc2NzMzNjQyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
